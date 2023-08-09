@@ -1,0 +1,49 @@
+
+<h1 style="background-color:#2CA8D8;">ELECTRONICS INFORMATION</h1>
+
+<p style="font-size: 20px;">
+	All the products
+</p>
+<table border=2>
+	<tr style='text-align:left; background-color:#CCC'>
+		<th>Product ID</th>
+		<th>Type</th>
+		<th>Model</th>
+		<th>Price</th>
+	</tr>
+<% data.forEach(function(electronics){ %>
+	<tr>
+	<td> <%=electronics.e_id %> </td>
+	<td> <%=electronics.type %> </td>
+	<td> <%=electronics.model %> </td>
+	<td> <%=electronics.price%> </td>
+	<% }) %>
+	</tr>
+	
+	
+	
+</table>
+<p>	
+</p>
+<h1 style="background-color:#2CA8D8;">Enter  new products</h1>
+<p>	
+</p>
+<p>	
+</p>
+<p>	
+</p>
+<form method ="POST" action="/display">
+	Type:<input type="text" name="type" placeholder="Enter type of product">
+	Model:<input type="text" name="model" placeholder="Enter the model">
+	Price:<input type="number" name="price" placeholder="Enter the price">
+	
+	
+		
+		
+<button>Submit</button>
+</form>
+
+ <a href="https://sj-sql.run-us-west2.goorm.io">HOME</a>
+
+	
+</form>

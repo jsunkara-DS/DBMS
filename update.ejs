@@ -1,0 +1,34 @@
+<h1 style="background-color:#2CA8D8;">ELECTRONICS INFORMATION</h1>
+
+<p style="font-size: 20px;">
+	All the products
+</p>
+<table border=2>
+	<tr style='text-align:left; background-color:#CCC'>
+		<th>Branch ID</th>
+		<th>Product ID</th>
+		<th>Available</th>
+	</tr>
+<% data.forEach(function(store_inventory){ %>
+	<tr>
+	<td> <%=store_inventory.s_id %> </td>
+	<td> <%=store_inventory.e_id %> </td>
+	<td> <%=store_inventory.available %> </td>
+	<% }) %>
+	</tr>
+</table>
+	
+<p style="font-size: 20px;">
+Update Store_inventory	
+</p>
+<form method ="POST" action="/update">
+	Branch_ID:<input type="number" name="SID" placeholder="Enter branch ID">
+	Product_ID:<input type="number" name="PID" placeholder="Enter Product ID">
+	Quantity:<input type="number" name="available" placeholder="Enter available quantity">
+	
+	
+		
+		
+<button>Update</button>
+	 <a href="https://sj-sql.run-us-west2.goorm.io">HOME</a>
+</form>
